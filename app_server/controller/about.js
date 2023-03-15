@@ -6,4 +6,4 @@ const about = (req, res) => {
 // Export the module
 module.exports = {
     about
-}
+};

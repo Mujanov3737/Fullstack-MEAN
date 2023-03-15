@@ -6,4 +6,4 @@ const travel = (req, res) => {
 // Export the module
 module.exports = {
     travel
-}
+};

@@ -6,4 +6,4 @@ const news = (req, res) => {
 // Export the module
 module.exports = {
     news
-}
+};

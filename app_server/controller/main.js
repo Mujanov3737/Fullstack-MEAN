@@ -6,4 +6,4 @@ const index = (req, res) => {
 // Export the index module
 module.exports = {
     index
-}
+};

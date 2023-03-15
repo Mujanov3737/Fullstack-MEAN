@@ -6,4 +6,4 @@ const contact = (req, res) => {
 // Export the module
 module.exports = {
     contact
-}
+};
