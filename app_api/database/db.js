@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const host = process.env.DB_HOST || '127.0.0.1';
-const dbURI = 'mongodb://${host}/travlr';
+const dbURI = 'mongodb://127.0.0.1:27017/travlr';
 const readLine = require('readline');
 
 // Avoid 'current surver discovery and monitoring engine is deprecated'
@@ -24,6 +24,7 @@ mongoose.connection.on('disconnected', () => {
     console.log('Mongoose disconnected');
 });
 
+/*
 if (process.platform == 'win32') {
     const rl = readLine.createInterface({
         input: process.stdin,
@@ -33,6 +34,7 @@ if (process.platform == 'win32') {
         process.emit("SIGINT");
     });
 }
+*/
 
 const gracefulShutdown = (msg, callback) => {
     mongoose.connection.close(() => {
@@ -62,4 +64,5 @@ process.on('SIGTERM', () => {
 
 connect();
 
-require('./travlr');
+require('./models/travlr');
+
