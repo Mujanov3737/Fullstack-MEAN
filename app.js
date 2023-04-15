@@ -25,9 +25,10 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'app_server', 'views'));
+app.set('view engine', 'hbs');
+
 // Register handlebars partials
 hbs.registerPartials(path.join(__dirname, 'app_server', 'views/partials'));
-app.set('view engine', 'hbs');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -57,6 +58,15 @@ app.use('/api', apiRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
+});
+
+// catch unauthorized error and create 401
+app.use(function(err, req, res, next) {
+  if (err.name === 'UnauthorizedError') {
+    res
+      .status(401)
+      .json({ "message": err.name + ": " + err.message});
+  }
 });
 
 // error handler
