@@ -115,10 +115,35 @@ const tripsUpdateTrip = async (req, res) => {
     );
 }
 
+// DELETE: /trips/:tripCode deletes a trip
+const tripsDeleteTrip = async (req, res) => {
+    getUser(req, res,
+        (req, res) => {
+    Trip
+    .findOne({ 'code': req.params.tripCode })
+    .exec((err, trip) => {
+        if (!trip) {
+            return res
+                .status(404)
+                .json({ "message": "Trip not found" });
+        } else if (err) {
+            return res
+                .status(404)
+                .json(err);
+        } else {
+            trip.remove();
+            return res
+                .status(200)
+                .json(trip);
+        }
+    });
+    });
+};
+
 const getUser = (req, res, callback) => {
-    if (req.payload && req.payload.email) {
+    if (req.auth && req.auth.email) {
         User
-            .findOne({ email : req.payload.email })
+            .findOne({ email : req.auth.email })
             .exec((err, user) => {
                 if (!user) {
                     return res
@@ -135,7 +160,7 @@ const getUser = (req, res, callback) => {
         } else {
             return res
                 .status(404)
-                .json({ "message": "User not found2" });
+                .json({ "message": "User not found" });
     }
 };
 
@@ -143,5 +168,6 @@ module.exports = {
     tripsList,
     tripsFindCode,
     tripsAddTrip,
-    tripsUpdateTrip
+    tripsUpdateTrip,
+    tripsDeleteTrip
 };
