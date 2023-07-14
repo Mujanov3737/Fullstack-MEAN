@@ -1,11 +1,12 @@
 # Vacation Booking Fullstack
 This repository contains a fullstack web application that was built using the MEAN stack (MongoDB, ExpressJs, AngularJs, and NodeJs). The primary resource used to aid in development was *Getting MEAN with Mongo, Express, Angular, and Node, Second Edition*, which can be found here: https://learning.oreilly.com/library/view/getting-mean-with/9781617294754/
 ## Sequence Diagram
-![Sequence Diagram_Travlr Getaways](https://github.com/Mujanov3737/Fullstack-MEAN/assets/75598761/1598a53e-2b22-4b85-a286-815db59357b4)
-## Admin SPA without Login
-![NoLogin](https://github.com/Mujanov3737/Fullstack-MEAN/assets/75598761/c80fb317-db95-45d2-9aba-15b889244c89)
+![Sequence Diagram_Travlr Getaways](https://github.com/Mujanov3737/Fullstack-MEAN/assets/75598761/09d57049-5e12-4e12-b1f8-384294ff2c02)
+## SPA without Login
+![NoLogin](https://github.com/Mujanov3737/Fullstack-MEAN/assets/75598761/45cac31d-0f10-4030-9f48-823fca7e4a2d)
 ## Admin SPA with Login
-![Authen](https://github.com/Mujanov3737/Fullstack-MEAN/assets/75598761/bbeb10fd-2f82-4619-a862-0e644aad2149)
+![Authen](https://github.com/Mujanov3737/Fullstack-MEAN/assets/75598761/bf0652ec-2fec-470f-a57d-2e3f7a203e97)
+
 ## Architecture
 ### Types of frontend development concepts utilized - Express, JavaScript, single-page application (SPA)
 Initially, the webpages presented to the user were static HTML format, stylized with a CSS stylesheet, and delivered through the help of the Express.js framework. These files were stored in the public directory, so a user could enter the protocol, domain, and file name to access these HTML files from the server and have them displayed in the browser. Further in the development, the MVC or model-view-controller pattern was implemented in order to better organize the serving of these webpages (separation of concerns). The view portion contained the refactored handlebar templates containing the HTML code to be presented to the user. Routes are used to map HTTP requests to the controller, which then handles how and what to retrieve from the view to present to the user. 
