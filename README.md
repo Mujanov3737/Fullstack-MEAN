@@ -1,5 +1,5 @@
 # Vacation Booking Fullstack
-This repository contains a fullstack web application that was built using the MEAN stack (MongoDB, ExpressJs, AngularJs, and NodeJs). The primary resource used to aid in development was Getting MEAN with Mongo, Express, Angular, and Node, Second Edition, which can be found here: https://learning.oreilly.com/library/view/getting-mean-with/9781617294754/
+This repository contains a fullstack web application that was built using the MEAN stack (MongoDB, ExpressJs, AngularJs, and NodeJs). The primary resource used to aid in development was *Getting MEAN with Mongo, Express, Angular, and Node, Second Edition*, which can be found here: https://learning.oreilly.com/library/view/getting-mean-with/9781617294754/
 ## Sequence Diagram
 ![Sequence Diagram_Travlr Getaways](https://github.com/Mujanov3737/Fullstack-MEAN/assets/75598761/1598a53e-2b22-4b85-a286-815db59357b4)
 ## Admin SPA without Login
