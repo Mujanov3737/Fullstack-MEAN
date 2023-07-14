@@ -1,4 +1,10 @@
 # Vacation Booking Fullstack
+## Sequence Diagram
+![Sequence Diagram_Travlr Getaways](https://github.com/Mujanov3737/Fullstack-MEAN/assets/75598761/1598a53e-2b22-4b85-a286-815db59357b4)
+## Admin SPA without Login
+![NoLogin](https://github.com/Mujanov3737/Fullstack-MEAN/assets/75598761/c80fb317-db95-45d2-9aba-15b889244c89)
+## Admin SPA with Login
+![TitleCards](https://github.com/Mujanov3737/Fullstack-MEAN/assets/75598761/9e96117f-fe7f-4f98-9b47-fe3044281829)
 ## Architecture
 ### Types of frontend development concepts utilized - Express, JavaScript, single-page application (SPA)
 Initially, the webpages presented to the user were static HTML format, stylized with a CSS stylesheet, and delivered through the help of the Express.js framework. These files were stored in the public directory, so a user could enter the protocol, domain, and file name to access these HTML files from the server and have them displayed in the browser. Further in the development, the MVC or model-view-controller pattern was implemented in order to better organize the serving of these webpages (separation of concerns). The view portion contained the refactored handlebar templates containing the HTML code to be presented to the user. Routes are used to map HTTP requests to the controller, which then handles how and what to retrieve from the view to present to the user. 
